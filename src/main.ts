@@ -129,7 +129,7 @@ Apify.main(async () => {
     const crawler = new Apify.PuppeteerCrawler({
         requestQueue,
         handlePageFunction,
-        proxyConfiguration: proxyConfigurationObject,
+        proxyConfiguration: proxyConfigurationObject ?? undefined,
         maxRequestsPerCrawl,
         maxConcurrency,
         handlePageTimeoutSecs: timeoutForSingleUrlInSeconds,
